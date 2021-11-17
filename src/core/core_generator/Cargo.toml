@@ -1,5 +1,5 @@
 [package]
-name = "core"
+name = "core_generator"
 version = "0.1.0"
 authors = ["Diogo Almirante <diogo.almirante@miniclip.com>"]
 edition = "2018"
@@ -12,5 +12,3 @@ proc-macro = true
 [dependencies]
 quote = "1.0"
 syn = { version = "1.0.81", features = ["full"] }
-toml = "0.5.8"
-serde = "1.0"

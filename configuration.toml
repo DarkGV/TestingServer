@@ -1,0 +1,3 @@
+environment="local"
+[server_configuration]
+port=9001

@@ -4,9 +4,6 @@ use proc_macro::TokenStream;
 use quote::quote;
 use syn;
 
-// Module
-
-
 #[proc_macro_attribute]
 pub fn launch(_attr: TokenStream, item: TokenStream) -> TokenStream {
     // We want to start the server here.
@@ -23,7 +20,7 @@ pub fn launch(_attr: TokenStream, item: TokenStream) -> TokenStream {
         }
 
         fn main() {
-            
+            config::load_configuration(String::from("configuration.toml"));
             #function_name();
         }
     ).into()
