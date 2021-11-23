@@ -20,8 +20,8 @@ pub fn launch(_attr: TokenStream, item: TokenStream) -> TokenStream {
         }
 
         fn main() {
-            config::load_configuration(String::from("configuration.toml"));
-            #function_name();
+            let cfg = config::load_configuration(String::from("configuration.toml")).unwrap();
+            server::launch(cfg, &#function_name);
         }
     ).into()
 }

@@ -6,13 +6,13 @@ use std::fs;
 #[derive(Deserialize)]
 pub struct Configuration {
     environment: String, // dev, stg, prod, local
-    server_configuration: ServerConfiguration,
+    pub ServerConfig: ServerConfiguration,
 }
 
 #[derive(Deserialize)]
 pub struct ServerConfiguration {
-    host: Option<String>, // any, local
-    port: u32,
+    pub Host: Option<String>, // any, local
+    pub Port: u32,
 }
 
 pub fn load_configuration(filename: String) -> Option<Configuration> {
